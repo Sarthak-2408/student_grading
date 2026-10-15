@@ -12,6 +12,10 @@ def calculate_grade(marks):
   else :
      return "F"
 
-def process_student(name,marks):
-   grade=calculate_grade(fl0at(marks))
-   return f"{name}:{grade}"
+def generate_report(students):
+   """Generate a report listing student and their grades."""
+   lines=["Student Report","-----------------"]
+   for name,marks in students:
+      grade = calculate_grade(marks)
+      lines.append(f"{name}:{marks}-Grade{grade}")
+   return "\n".join(lines)
