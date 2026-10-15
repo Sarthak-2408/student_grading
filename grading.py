@@ -3,12 +3,14 @@ def calculate_grade(marks):
      raise ValueError("Marks must be numeric")
   if not 0<=marks<=100:
      raise ValueError("Marks must be between 0 and 100")
-  if marks>=80:
+  if marks>=90:
      return "A"
-  elif marks>=60:
+  elif marks>=70:
      return "B"
-  elif marks>=40:
+  elif marks>=50:
      return "C"
+  elif marks>=30:
+     return "D"
   else :
      return "F"
 
